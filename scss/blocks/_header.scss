@@ -1,1 +1,99 @@
+.header{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: 500;
+}
+.logo{
+    & img{
+        min-height: 60px;
+        min-width: 203px;
+        @media (max-width: 1600px) {
+            min-width: clamp(11.25rem, 10.8906rem + 1.7969vw, 12.6875rem);
+            min-height: auto;
+        }
+    }
+    &:hover{
+        opacity: 80%;
+        transition: all 0.5s;
+    }
+    height: 70px;
+}
+.header__communications{
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+}
+.menu{
+    & ol {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        align-items: center;
+    }
+    @media (max-width: 1600px) {
+        display: none;
+    }
+}
+.menu-link{
+    & ol{
+        display: flex;
+        gap: 50px;
+        & li{
+            height: 100%;
+            border-bottom: 2px var(--white) solid;
+            display: flex;
+            align-items: center;
+            &:hover{
+                border-bottom: 2px var(--accent-color) solid;
+                color: var(--accent-color);
+                transition: all 0.5s;
+            }
+        }
+    }
+}
+.menu-btn{
+    & ol{
+        display: flex;
+        gap: 30px;
+        & li{
+            border-radius: 40px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            padding: 0px 40px 0px 40px;
+        }
+    }
+}
+#menu-btn-1{
+    border: 2px var(--accent-color) solid;
+    &:hover{
+        background-color: var(--accent-color);
+        color: var(--white);
+        transition: all 0.5s;
+    }
+}
+#menu-btn-2{
+    background-color: var(--dark-purple);
+    color: var(--white);
+    &:hover{
+        opacity: 80%;
+        transition: all 0.5s;
+    }
+}
+.header__burger{
+    & a{
+        width: 50px;
+        height: 50px;
+    }
+    display: none;
+    align-items: center;
+    justify-content: center;
 
+    @media (max-width: 1600px) {
+        display: flex;
+    }
+}

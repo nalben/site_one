@@ -1,0 +1,57 @@
+@font-face {
+    font-family: "Mabry Pro";
+    src: url("../fonts/MabryPro-Regular.ttf"); 
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Mabry Pro";
+    src: url("../fonts/MabryPro-Medium.ttf");
+    font-weight: 500;
+}
+@font-face {
+    font-family: "CoFo Sans";
+    src: url("../fonts/CoFoSansRegular.ttf");
+    font-weight: 400;
+}
+@font-face {
+    font-family: "CoFo Sans";
+    src: url("../fonts/CoFoSansMedium.ttf");
+    font-weight: 500;
+}
+:root {
+    --accent-color: #7557FF;
+    --dark-purple: #373042;
+    --grey: #9F9F9F;
+    --white: #FFFFFF;
+    --white-opacity: #FFFFFF19;
+    --padding-left: clamp(1.25rem, -1.4286rem + 11.4286vw, 10rem);
+    --padding-right: clamp(1.0625rem, -1.6735rem + 11.6735vw, 10rem);
+}
+body{
+    color: var(--dark-purple);
+    font-family: 'CoFo Sans';
+    font-weight: 400;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    background-color: var(--grey);
+    padding-right: calc(100vw - 100%);
+}
+.site-con{
+    flex-basis: 1920px;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+}
+.wrapper{
+    padding: 0px 160px 0px 160px;
+    @media (max-width: 1600px) {
+        padding-right: clamp(1.0625rem, -1.6735rem + 11.6735vw, 10rem);
+        padding-left: clamp(1.25rem, -1.4286rem + 11.4286vw, 10rem);
+    }
+        @media (max-width: 1890px) {
+            padding-right: clamp(3.125rem, -119.9375rem + 110vw, 10rem);
+        }
+}
+
+
